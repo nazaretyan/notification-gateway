@@ -10,12 +10,7 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>api</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>api-application</module>
-        <module>api-rest</module>
-    </modules>
+    <artifactId>common</artifactId>
+    <packaging>jar</packaging>
 
 </project>
