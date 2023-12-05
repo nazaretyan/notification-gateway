@@ -14,6 +14,7 @@
     <groupId>com.example.notification</groupId>
     <artifactId>notification-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <name>Notification Gateway</name>
     <description>Demo project for Spring Boot</description>
@@ -23,20 +24,14 @@
         <kotlin.version>1.9.20</kotlin.version>
     </properties>
 
+    <modules>
+        <module>api</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
