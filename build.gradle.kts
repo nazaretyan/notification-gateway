@@ -7,6 +7,7 @@ plugins {
 
 	kotlin("jvm") apply false
 	kotlin("plugin.spring") apply false
+	kotlin("plugin.jpa") apply false
 }
 
 allprojects {
@@ -24,6 +25,7 @@ subprojects {
 
 		plugin("org.jetbrains.kotlin.jvm")
 		plugin("org.jetbrains.kotlin.plugin.spring")
+		plugin("org.jetbrains.kotlin.plugin.jpa")
 	}
 
 	dependencyManagement {
@@ -35,11 +37,9 @@ subprojects {
 	tasks.withType<KotlinCompile> {
 		kotlinOptions {
 			freeCompilerArgs += "-Xjsr305=strict"
-			jvmTarget = "21"
+			jvmTarget = "17"
 		}
 	}
 
-	tasks.withType<Test> {
-		useJUnitPlatform()
-	}
+	tasks.withType<Test>(Test::useJUnitPlatform)
 }
